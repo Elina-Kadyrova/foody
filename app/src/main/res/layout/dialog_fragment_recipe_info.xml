@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp">
+
+    <TextView
+        android:id="@+id/tv_nutrients_info"
+        style="@style/TextViewScreenTitles"
+        android:layout_marginTop="8dp"
+        android:text="@string/nutrients_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_calories"
+        style="@style/TextViewNutrientsInfo"
+        android:text="@string/calories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nutrients_info" />
+
+    <TextView
+        android:id="@+id/tv_calories_amount"
+        style="@style/TextViewNutrientsInfoAmount"
+        android:layout_marginStart="16dp"
+        android:text="@string/nutrients_info_amount_example"
+        app:layout_constraintStart_toEndOf="@id/tv_calories"
+        app:layout_constraintTop_toTopOf="@id/tv_calories" />
+
+    <TextView
+        android:id="@+id/tv_carbs"
+        style="@style/TextViewNutrientsInfo"
+        android:text="@string/carbs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_calories" />
+
+    <TextView
+        android:id="@+id/tv_carbs_amount"
+        style="@style/TextViewNutrientsInfoAmount"
+        android:text="@string/nutrients_info_amount_example"
+        app:layout_constraintStart_toStartOf="@id/tv_calories_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_carbs" />
+
+    <TextView
+        android:id="@+id/tv_fats"
+        style="@style/TextViewNutrientsInfo"
+        android:text="@string/fat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_carbs" />
+
+    <TextView
+        android:id="@+id/tv_fats_amount"
+        style="@style/TextViewNutrientsInfoAmount"
+        android:text="@string/nutrients_info_amount_example"
+        app:layout_constraintStart_toStartOf="@id/tv_carbs_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_fats" />
+
+    <TextView
+        android:id="@+id/tv_protein"
+        style="@style/TextViewNutrientsInfo"
+        android:text="@string/protein"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_fats" />
+
+    <TextView
+        android:id="@+id/tv_protein_amount"
+        style="@style/TextViewNutrientsInfoAmount"
+        android:text="@string/nutrients_info_amount_example"
+        app:layout_constraintStart_toStartOf="@id/tv_fats_amount"
+        app:layout_constraintTop_toTopOf="@id/tv_protein" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

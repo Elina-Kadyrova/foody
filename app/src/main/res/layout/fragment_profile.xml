@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppToolbar"
+            app:title="@string/username_example" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_account"
+        style="@style/ShapeableImageViewStyle"
+        app:layout_constraintStart_toStartOf="@id/gl_vert_start"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/TextViewProfile"
+        android:text="@string/username_example"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vert_end"
+        app:layout_constraintStart_toEndOf="@+id/iv_account"
+        app:layout_constraintTop_toTopOf="@+id/iv_account" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        style="@style/TextViewProfile"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/email_example"
+        android:textColor="@color/grey_text_color"
+        app:layout_constraintEnd_toStartOf="@+id/gl_vert_end"
+        app:layout_constraintStart_toEndOf="@+id/iv_account"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_account_settings"
+        style="@style/ConstraintLayoutSettings"
+        android:layout_marginTop="48dp"
+        android:background="?selectableItemBackground"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/gl_vert_end"
+        app:layout_constraintStart_toStartOf="@id/gl_vert_start"
+        app:layout_constraintTop_toBottomOf="@+id/iv_account">
+
+        <View
+            style="@style/DelimiterStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_account_icon"
+            style="@style/ImageViewItemIconSettings"
+            android:src="@drawable/ic_baseline_account_circle_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_acc_settings"
+            style="@style/TextViewItemSettings"
+            android:text="@string/user_data"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_account_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_acc_settings"
+            style="@style/ImageViewArrowIconSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            style="@style/DelimiterStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_logout"
+        style="@style/ConstraintLayoutSettings"
+        android:background="?selectableItemBackground"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@id/gl_vert_end"
+        app:layout_constraintStart_toStartOf="@id/gl_vert_start"
+        app:layout_constraintTop_toBottomOf="@+id/cl_account_settings">
+
+        <View
+            style="@style/DelimiterStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_logout_icon"
+            style="@style/ImageViewItemIconSettings"
+            android:src="@drawable/ic_baseline_logout_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            style="@style/TextViewItemSettings"
+            android:text="@string/log_out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_logout_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_arrow_logout"
+            style="@style/ImageViewArrowIconSettings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            style="@style/DelimiterStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vert_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_vert_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

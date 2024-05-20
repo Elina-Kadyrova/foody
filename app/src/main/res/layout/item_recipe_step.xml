@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_recipe_step_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_step_num"
+        app:layout_constraintTop_toTopOf="@id/tv_step_num"
+        tools:text="@string/recipe_step_desc" />
+
+    <TextView
+        android:id="@+id/tv_step_num"
+        style="@style/TextViewIngredient"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_recipe_step_desc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/ingredient_number_example" />
+</androidx.constraintlayout.widget.ConstraintLayout>

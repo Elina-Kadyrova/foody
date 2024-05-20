@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonRounded" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">10dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+    </style>
+
+    <style name="ButtonRoundedDark" parent="ButtonRounded">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="ButtonRoundedLight" parent="ButtonRounded">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeWidth">4dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">84dp</item>
+        <item name="layout_constraintWidth_percent">.8</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="counterEnabled">true</item>
+        <item name="helperTextTextColor">@color/colorPrimaryDark</item>
+        <item name="errorTextColor">@color/error_color</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="TextViewBase">
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextViewDark" parent="TextViewBase">
+        <item name="android:textColor">@color/dark_text_color</item>
+    </style>
+
+    <style name="TextViewScreenTitles" parent="TextViewDark">
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="color">@color/dark_text_color</item>
+    </style>
+
+    <style name="TextViewNutrientsInfo" parent="TextViewBase">
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="TextViewNutrientsInfoAmount" parent="TextViewBase">
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="TextViewWhite" parent="TextViewBase">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextViewGrey" parent="TextViewBase">
+        <item name="android:textColor">@color/grey_text_color</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="TextViewProfile">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="DelimiterStyle">
+        <item name="color">@color/search_view</item>
+        <item name="android:layout_marginTop">56dp</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ShapeableImageViewStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="layout_constraintDimensionRatio">1</item>
+        <item name="layout_constraintWidth_percent">.3</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/stroke</item>
+        <item name="android:src">@drawable/profile_img</item>
+        <item name="shapeAppearance">@style/ShapeAppearanceOverlay.App.CornerSize50Percent</item>
+    </style>
+
+    <style name="EditTextProfile">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="layout_constraintWidth_percent">.75</item>
+    </style>
+
+    <style name="ConstraintLayoutSettings">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+    </style>
+
+    <style name="ImageViewIconSettings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ImageViewItemIconSettings" parent="ImageViewIconSettings">
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="ImageViewArrowIconSettings" parent="ImageViewIconSettings">
+        <item name="android:src">@drawable/ic_baseline_keyboard_arrow_right_24</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+    <style name="TextViewItemSettings">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">12dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextViewCollapsingToolbar">
+        <item name="android:textSize">42dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextViewIngredient">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="AppToolbar" parent="Theme.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?actionBarSize</item>
+        <item name="android:colorBackground">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+
+    <style name="popularRecipes" parent="">
+        <item name="cornerSize">20%</item>
+    </style>
+</resources>
