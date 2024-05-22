@@ -16,7 +16,7 @@
     <string name="registration">Registration</string>
     <string name="recipe_search">Search new recipes</string>
     <string name="no_recipe_found">No recipe found</string>
-    <string name="saved_recipes">Collections</string>
+    <string name="saved_recipes">Colections</string>
     <string name="acc_settings">Account settings</string>
     <string name="notifications">Notifications</string>
     <string name="nutrients_info">Nutrients info (per serving):</string>
@@ -57,7 +57,7 @@
     <string name="nutrients_info_btn">Nutrients info</string>
     <string name="time_example">1h 30m</string>
     <string name="servings_example">2</string>
-    <string name="summary">Short or long description of recipe by author on spoonacular.com</string>
+    <string name="summary">Short or long description of recipe by author</string>
     <string name="new_collection_hint">New collection name</string>
     <string name="choose">or</string>
     <string name="choose_collection">Choose collection to save</string>
