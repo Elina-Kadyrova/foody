@@ -31,6 +31,7 @@
         android:id="@+id/tv_username"
         style="@style/TextViewProfile"
         android:text="@string/username_example"
+        android:textSize="26sp"
         app:layout_constraintEnd_toStartOf="@+id/gl_vert_end"
         app:layout_constraintStart_toEndOf="@+id/iv_account"
         app:layout_constraintTop_toTopOf="@+id/iv_account" />
@@ -74,7 +75,7 @@
         <TextView
             android:id="@+id/tv_acc_settings"
             style="@style/TextViewItemSettings"
-            android:text="@string/user_data"
+            android:text="@string/acc_settings"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_account_icon"
             app:layout_constraintTop_toTopOf="parent" />

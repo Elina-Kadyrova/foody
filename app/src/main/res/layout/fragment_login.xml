@@ -78,7 +78,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/registration"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
         app:layout_constraintStart_toEndOf="@id/tv_do_not_registered"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/do_not_have_account"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@id/tv_registration"
         app:layout_constraintStart_toStartOf="@+id/btn_sign_in"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_in"
