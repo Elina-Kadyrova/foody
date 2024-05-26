@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -21,15 +23,27 @@
             app:title="@string/registration" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_username"
         style="@style/TextInputLayoutStyle"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:hint="@string/username"
         app:counterMaxLength="@integer/password_max_length"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias=".2"
         app:startIconContentDescription="@string/username"
         app:startIconDrawable="@drawable/ic_baseline_person_24">
@@ -43,13 +57,31 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_phone_number"
+        android:layout_marginTop="16dp"
+        style="@style/TextInputLayoutStyle"
+        android:hint="phone number"
+        app:layout_constraintEnd_toEndOf="@id/til_username"
+        app:layout_constraintStart_toStartOf="@id/til_username"
+        app:layout_constraintTop_toBottomOf="@id/til_username"
+        app:startIconDrawable="@drawable/ic_baseline_add_call_24">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_phone_number"
+            style="@style/TextInputEditTextStyle"
+            android:layout_weight="1"
+            android:inputType="phone"
+            android:maxLength="11"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_email"
         style="@style/TextInputLayoutStyle"
         android:hint="@string/email"
         app:counterMaxLength="@integer/email_max_length"
-        app:layout_constraintEnd_toEndOf="@id/til_username"
-        app:layout_constraintStart_toStartOf="@id/til_username"
-        app:layout_constraintTop_toBottomOf="@id/til_username"
+        app:layout_constraintEnd_toEndOf="@id/til_phone_number"
+        app:layout_constraintStart_toStartOf="@id/til_phone_number"
+        app:layout_constraintTop_toBottomOf="@id/til_phone_number"
         app:startIconContentDescription="@string/email"
         app:startIconDrawable="@drawable/ic_baseline_email_24">
 
@@ -61,15 +93,37 @@
             android:maxLength="@integer/email_max_length" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/til_email"
+        app:layout_constraintStart_toStartOf="@id/til_email"
+        app:layout_constraintTop_toBottomOf="@id/til_email">
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+    </RadioGroup>
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_pass"
         style="@style/TextInputLayoutStyle"
         android:hint="@string/password"
         app:counterMaxLength="@integer/password_max_length"
         app:endIconMode="password_toggle"
-        app:layout_constraintEnd_toEndOf="@id/til_email"
-        app:layout_constraintStart_toStartOf="@id/til_email"
-        app:layout_constraintTop_toBottomOf="@id/til_email"
+        app:layout_constraintEnd_toEndOf="@id/radioGroupGender"
+        app:layout_constraintStart_toStartOf="@id/radioGroupGender"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
         app:startIconContentDescription="@string/password"
         app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
@@ -101,13 +155,23 @@
             android:maxLength="@integer/password_max_length" />
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/checkBoxAgreement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="I agree to the processing of my data"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/til_rep_pass"
+        app:layout_constraintStart_toStartOf="@+id/til_rep_pass"
+        app:layout_constraintTop_toBottomOf="@id/til_rep_pass"/>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_up"
         style="@style/ButtonRoundedDark"
         android:text="@string/create_account"
-        app:layout_constraintEnd_toEndOf="@+id/til_rep_pass"
-        app:layout_constraintStart_toStartOf="@+id/til_rep_pass"
-        app:layout_constraintTop_toBottomOf="@id/til_rep_pass" />
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxAgreement"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxAgreement"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAgreement" />
 
     <TextView
         android:id="@+id/tv_already_registered"
@@ -133,4 +197,8 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_sign_up"
         app:layout_constraintStart_toEndOf="@+id/tv_already_registered"
         app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
