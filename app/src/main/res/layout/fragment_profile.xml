@@ -25,7 +25,8 @@
         android:id="@+id/iv_account"
         style="@style/ShapeableImageViewStyle"
         app:layout_constraintStart_toStartOf="@id/gl_vert_start"
-        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        android:contentDescription="Account photo"/>
 
     <TextView
         android:id="@+id/tv_username"
