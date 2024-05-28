@@ -8,6 +8,8 @@ import com.itis.foody.features.recipe.data.response.searchByName.RecipeListByNam
 import com.itis.foody.features.recipe.domain.models.RecipeSimple
 import com.itis.foody.features.recipe.domain.repositories.RecipeSearchRepository
 import javax.inject.Inject
+import kotlin.Result.Companion.failure
+import kotlin.Result.Companion.success
 
 class RecipeSearchRepositoryImpl @Inject constructor(
     private val api: Api,
@@ -25,12 +27,17 @@ class RecipeSearchRepositoryImpl @Inject constructor(
         LastSeenRepository.getList()
 
     private fun mapResults(
-        firstList: MutableList<RecipeSimple>,
-        secondList: MutableList<RecipeSimple>
+            firstList: Result<MutableList<RecipeSimple>>,
+            secondList: MutableList<RecipeSimple>
     ): MutableList<RecipeSimple> {
-        firstList.addAll(secondList)
-        firstList.shuffle()
-        return firstList
+        return firstList.fold(
+                onSuccess = { v ->
+                    v.addAll(secondList)
+                    v.shuffle()
+                    v },
+                onFailure = { _ -> mutableListOf()
+                }
+        )
     }
 
     private suspend fun getRecipeListByIngredient(ingredient: String): MutableList<RecipeSimple> =
@@ -38,8 +45,14 @@ class RecipeSearchRepositoryImpl @Inject constructor(
             api.getRecipesByIngredients(ingredient)
         )
 
-    private suspend fun getRecipeListByName(name: String): MutableList<RecipeSimple> =
-        recipeListByNameMapper.map(
-            api.getRecipesByName(name)
-        )
+    private suspend fun getRecipeListByName(name: String): Result<MutableList<RecipeSimple>> =
+            try {
+                success(
+                        recipeListByNameMapper.map(
+                                api.getRecipesByName(name)
+                        )
+                )
+            } catch (e: Exception) {
+                failure(e)
+            }
 }
