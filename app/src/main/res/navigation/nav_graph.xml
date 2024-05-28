@@ -21,7 +21,7 @@
                 app:destination="@id/searchFragment" />
             <action
                 android:id="@+id/action_profileFragment_to_recipeSetsFragment"
-                app:destination="@id/nav_recipe_set" />
+                app:destination="@id/recipeSetsFragment" />
         </fragment>
         <fragment
             android:id="@+id/searchFragment"
@@ -29,53 +29,30 @@
             android:label="SearchFragment">
             <action
                 android:id="@+id/action_searchFragment_to_detailRecipeFragment"
-                app:destination="@id/nav_detailed_recipe" />
+                app:destination="@id/detailRecipeFragment" />
             <action
                 android:id="@+id/action_searchFragment_to_recipeListFragment"
                 app:destination="@id/recipeListFragment" />
         </fragment>
-        <navigation
-            android:id="@+id/nav_detailed_recipe"
-            app:startDestination="@id/detailRecipeFragment">
-            <fragment
-                android:id="@+id/detailRecipeFragment"
-                android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.DetailRecipeFragment"
-                android:label="DetailRecipeFragment">
-                <action
-                    android:id="@+id/action_detailRecipeFragment_to_recipeInfoDialogFragment"
-                    app:destination="@id/recipeInfoDialogFragment" />
-            </fragment>
-            <dialog
-                android:id="@+id/recipeInfoDialogFragment"
-                android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.RecipeInfoDialogFragment"
-                android:label="RecipeInfoDialogFragment" />
+        <fragment
+            android:id="@+id/detailRecipeFragment"
+            android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.DetailRecipeFragment"
+            android:label="DetailRecipeFragment">
             <action
-                android:id="@+id/action_global_recipeListFragment"
+                android:id="@+id/action_detailRecipeFragment_to_recipeListFragment"
                 app:destination="@id/recipeListFragment" />
-        </navigation>
-        <navigation
-            android:id="@+id/nav_recipe_set"
-            app:startDestination="@id/recipeSetsFragment">
-            <fragment
-                android:id="@+id/recipeSetsFragment"
-                android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.RecipeSetsFragment"
-                android:label="RecipeSetsFragment">
-                <action
-                    android:id="@+id/action_recipeSetsFragment_to_savedRecipesFragment"
-                    app:destination="@id/savedRecipesFragment" />
-            </fragment>
-            <fragment
-                android:id="@+id/savedRecipesFragment"
-                android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.SavedRecipesFragment"
-                android:label="SavedRecipesFragment">
-                <action
-                    android:id="@+id/action_savedRecipesFragment_to_detailRecipeFragment"
-                    app:destination="@id/nav_detailed_recipe" />
-                <action
-                    android:id="@+id/action_savedRecipesFragment_to_searchFragment"
-                    app:destination="@id/searchFragment" />
-            </fragment>
-        </navigation>
+        </fragment>
+        <fragment
+            android:id="@+id/recipeSetsFragment"
+            android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.RecipeSetsFragment"
+            android:label="RecipeSetsFragment">
+            <action
+            android:id="@+id/action_recipeSetsFragment_to_detailRecipeFragment"
+            app:destination="@id/detailRecipeFragment" />
+            <action
+                android:id="@+id/action_recipeSetsFragment_to_searchFragment"
+                app:destination="@id/searchFragment" />
+        </fragment>
         <fragment
             android:id="@+id/userSettingsFragment"
             android:name="com.itis.foody.features.user.presentation.fragments.UserSettingsFragment"
@@ -85,8 +62,8 @@
             android:name="com.itis.foody.features.recipe.presentation.recipe.fragments.RecipeListFragment"
             android:label="RecipeListFragment" >
             <action
-                android:id="@+id/action_recipeListFragment_to_nav_detailed_recipe"
-                app:destination="@id/nav_detailed_recipe" />
+                android:id="@+id/action_recipeListFragment_to_detailRecipeFragment"
+                app:destination="@id/detailRecipeFragment" />
         </fragment>
     </navigation>
     <navigation android:id="@+id/nav_auth"

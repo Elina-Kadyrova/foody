@@ -59,6 +59,8 @@
         app:layout_constraintStart_toStartOf="@id/gl_vert_start"
         app:layout_constraintTop_toBottomOf="@+id/iv_account">
 
+        <!--action_profileFragment_to_userSettingsFragment-->
+
         <View
             style="@style/DelimiterStyle"
             app:layout_constraintEnd_toEndOf="parent"

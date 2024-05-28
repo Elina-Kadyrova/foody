@@ -261,7 +261,7 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
     }
 
     private fun initListeners() {
-        with(binding) {
+       /* with(binding) {
             btnNutrientsInfo.setOnClickListener {
                 recipe.let {
                     findNavController().navigate(
@@ -284,7 +284,7 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
             fabSimilar.setOnClickListener {
                 showSimilarRecipes()
             }
-        }
+        }*/
     }
 
     private fun removeRecipe() {
@@ -308,9 +308,9 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
     }
 
     private fun showSimilarRecipes() {
-        findNavController().navigate(
+        /*findNavController().navigate(
             R.id.action_global_recipeListFragment,
             bundleOf("SIMILAR_TO_ID" to recipe.id)
-        )
+        )*/
     }
 }

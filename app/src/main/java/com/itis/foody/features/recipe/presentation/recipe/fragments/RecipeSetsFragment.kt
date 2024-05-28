@@ -124,12 +124,12 @@ class RecipeSetsFragment : Fragment(R.layout.fragment_recipe_sets) {
     }
 
     private fun showSavedRecipes(id: String, name: String) {
-        findNavController().navigate(
+        /*findNavController().navigate(
             R.id.action_recipeSetsFragment_to_savedRecipesFragment,
             bundleOf(
                 "COLLECTION_ID" to id,
                 "COLLECTION_NAME" to name
             )
-        )
+        )*/
     }
 }

@@ -7,7 +7,7 @@
         android:title=""
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/nav_recipe_set"
+        android:id="@+id/recipeSetsFragment"
         android:icon="@drawable/ic_baseline_bookmark_border_24"
         android:title=""
         app:showAsAction="ifRoom" />

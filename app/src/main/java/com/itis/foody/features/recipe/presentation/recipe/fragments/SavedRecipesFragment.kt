@@ -125,18 +125,18 @@ class SavedRecipesFragment : Fragment(R.layout.fragment_saved_recipes) {
     }
 
     private fun setListeners() {
-        with(binding) {
+        /*with(binding) {
             fabAdd.setOnClickListener {
                 findNavController().navigate(R.id.action_savedRecipesFragment_to_searchFragment)
             }
-        }
+        }*/
     }
 
     private fun showRecipe(id: Int) {
-        findNavController().navigate(
+        /*findNavController().navigate(
             R.id.action_savedRecipesFragment_to_detailRecipeFragment,
             bundleOf("RECIPE_ID" to id)
-        )
+        )*/
     }
 
     private fun setActionBarAttrs() {

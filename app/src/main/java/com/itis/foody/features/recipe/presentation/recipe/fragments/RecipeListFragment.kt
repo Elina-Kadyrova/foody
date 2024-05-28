@@ -96,9 +96,9 @@ class RecipeListFragment : Fragment(R.layout.fragment_recipe_list) {
     }
 
     private fun showRecipe(id: Int) {
-        findNavController().navigate(
+        /*findNavController().navigate(
             R.id.action_recipeListFragment_to_nav_detailed_recipe,
             bundleOf("RECIPE_ID" to id)
-        )
+        )*/
     }
 }
