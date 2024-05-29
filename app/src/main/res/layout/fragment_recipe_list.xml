@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
@@ -48,7 +49,9 @@
         app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:spanCount="2"
         tools:itemCount="5"
-        tools:listitem="@layout/item_recipe" />
+        tools:listitem="@layout/item_recipe">
+        <!--action_recipeListFragment_to_detailRecipeFragment-->
+    </androidx.recyclerview.widget.RecyclerView>
 
     <ProgressBar
         android:id="@+id/progressBar"

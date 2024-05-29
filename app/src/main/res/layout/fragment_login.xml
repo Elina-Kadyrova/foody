@@ -69,7 +69,9 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/til_pass"
         app:layout_constraintStart_toStartOf="@+id/til_pass"
-        app:layout_constraintTop_toBottomOf="@id/til_pass" />
+        app:layout_constraintTop_toBottomOf="@id/til_pass">
+        <!--action_loginFragment_to_profileFragment-->
+    </com.google.android.material.button.MaterialButton>
 
     <TextView
         android:id="@+id/tv_registration"
@@ -81,7 +83,9 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/btn_sign_in"
         app:layout_constraintStart_toEndOf="@id/tv_do_not_registered"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in">
+        <!--action_loginFragment_to_registrationFragment-->
+    </TextView>
 
     <TextView
         android:id="@+id/tv_do_not_registered"

@@ -261,20 +261,7 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
     }
 
     private fun initListeners() {
-       /* with(binding) {
-            btnNutrientsInfo.setOnClickListener {
-                recipe.let {
-                    findNavController().navigate(
-                        R.id.action_detailRecipeFragment_to_recipeInfoDialogFragment,
-                        bundleOf(
-                            "CALORIES" to it.nutrientsInfo.calories,
-                            "CARBS" to it.nutrientsInfo.carbs,
-                            "FAT" to it.nutrientsInfo.carbs,
-                            "PROTEIN" to it.nutrientsInfo.protein
-                        )
-                    )
-                }
-            }
+       with(binding) {
             fabSave.setOnClickListener {
                 isRecipeAlreadySaved?.apply {
                     if (this) removeRecipe()
@@ -284,7 +271,7 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
             fabSimilar.setOnClickListener {
                 showSimilarRecipes()
             }
-        }*/
+        }
     }
 
     private fun removeRecipe() {
@@ -308,9 +295,9 @@ class DetailRecipeFragment : Fragment(R.layout.fragment_detail_recipe) {
     }
 
     private fun showSimilarRecipes() {
-        /*findNavController().navigate(
-            R.id.action_global_recipeListFragment,
+        findNavController().navigate(
+            R.id.action_detailRecipeFragment_to_recipeListFragment,
             bundleOf("SIMILAR_TO_ID" to recipe.id)
-        )*/
+        )
     }
 }

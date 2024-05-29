@@ -28,11 +28,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="320dp"
                 android:layout_gravity="center"
+                android:contentDescription="Food photo"
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 android:src="@drawable/recipe_example"
-                app:layout_collapseMode="parallax"
-                android:contentDescription="Food photo"/>
+                app:layout_collapseMode="parallax" />
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -186,6 +186,8 @@
         android:src="@drawable/ic_baseline_menu_book_24"
         app:backgroundTint="@color/show_more_btn"
         app:layout_anchor="@id/cl_content"
-        app:layout_anchorGravity="end|bottom" />
+        app:layout_anchorGravity="end|bottom">
+        <!--action_detailRecipeFragment_to_recipeListFragment-->
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

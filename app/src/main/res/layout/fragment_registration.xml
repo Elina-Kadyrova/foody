@@ -171,7 +171,9 @@
         android:text="@string/create_account"
         app:layout_constraintEnd_toEndOf="@+id/checkBoxAgreement"
         app:layout_constraintStart_toStartOf="@+id/checkBoxAgreement"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxAgreement" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxAgreement">
+        <!--action_registrationFragment_to_profileFragment-->
+    </com.google.android.material.button.MaterialButton>
 
     <TextView
         android:id="@+id/tv_already_registered"
@@ -196,7 +198,9 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/btn_sign_up"
         app:layout_constraintStart_toEndOf="@+id/tv_already_registered"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sign_up" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_up">
+        <!--action_registrationFragment_to_loginFragment-->
+    </TextView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
