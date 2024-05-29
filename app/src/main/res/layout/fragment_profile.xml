@@ -159,4 +159,20 @@
         android:orientation="vertical"
         app:layout_constraintGuide_end="16dp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/show_more_btn"
+        android:contentDescription="@string/similar_recipes"
+        android:src="@drawable/ic_baseline_search_24"
+        app:backgroundTint="@color/show_more_btn"
+        app:layout_anchorGravity="end|bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <!--action_detailRecipeFragment_to_searchFragment-->
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
